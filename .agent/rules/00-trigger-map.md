@@ -10,6 +10,13 @@ priority: 1
 This is the **first file you must read** before doing any work in this repository.
 It tells you which other rule files to load based on what you are doing.
 
+### MANDATORY PRE-CHANGE COMPLIANCE AUDIT (FOR EVERY CONVERSATION)
+
+Before you write, edit, or propose any code changes, business logic changes, or new modules:
+1. You MUST check the current codebase to verify if the basic modules (Authentication setup, routing guards, dynamic config, variables.css layout, and UI components) are complete, valid, and compliant with the organization's rule files.
+2. If there are any missing files, code gaps, or non-compliant configurations, you MUST list them for the developer first.
+3. You MUST present the developer with the relevant module checklists and ask clarifying questions BEFORE making or proposing any code changes. Do not bypass this step.
+
 **Do NOT load all rules simultaneously.**
 Load only what the trigger map below instructs for your current task.
 This prevents context overload and rule hallucination across large development sessions.
