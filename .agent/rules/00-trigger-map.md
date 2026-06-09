@@ -13,9 +13,13 @@ It tells you which other rule files to load based on what you are doing.
 ### MANDATORY PRE-CHANGE COMPLIANCE AUDIT (FOR EVERY CONVERSATION)
 
 Before you write, edit, or propose any code changes, business logic changes, or new modules:
-1. You MUST check the current codebase to verify if the basic modules (Authentication setup, routing guards, dynamic config, variables.css layout, and UI components) are complete, valid, and compliant with the organization's rule files.
-2. If there are any missing files, code gaps, or non-compliant configurations, you MUST list them for the developer first.
-3. You MUST present the developer with the relevant module checklists and ask clarifying questions BEFORE making or proposing any code changes. Do not bypass this step.
+1. You MUST audit the current codebase to verify if the organization's baseline modules are complete and compliant.
+2. You MUST write this audit report into a new markdown artifact named `compliance_audit_report.md` containing a checklist table of required modules:
+   *   **Authentication & Client** (AuthContext, Axios Client, Login/Register pages)
+   *   **Security & Guards** (PrivateRoute, HasPermission check)
+   *   **UI Foundation** (variables.css layout, components.css, reset.css)
+   *   **Shared Components** (paginated DataGrid, ConfirmDialog, Toast, ErrorBoundary)
+3. If any file or module is missing or non-compliant, you MUST use the `ask_question` tool to trigger an interactive pop-up modal to ask the developer how to proceed (e.g., whether to auto-scaffold the missing baseline modules first, or proceed). Do not bypass this step.
 
 **Do NOT load all rules simultaneously.**
 Load only what the trigger map below instructs for your current task.
